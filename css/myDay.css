@@ -1,0 +1,39 @@
+body,html {
+    background-image: url(bckgrnd.png) ;
+    height: 100%;
+
+  }
+.bg {
+    background-image: url("bckgrnd.png");
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+h2{
+    width: 100%;
+    height: 100px;
+    float: right;
+    border-collapse: collapse;
+    color:black;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Potta One', sans-serif;
+    font-size: 50px;
+}
+
+li{
+    font-family: "Yusei Magic", sans-serif;
+    font-size: 40px;
+    color:#F52887 ;
+    list-style: none;
+
+}
+.listDiv{
+    text-align: left;
+}
+.timeText{
+  text-align: right;
+}
+

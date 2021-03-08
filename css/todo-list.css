@@ -1,0 +1,265 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+/* ADDING BACKGROUND COLOR, FONT  FAMILY, FOREGROUND COLOR AND MINIMUN HEIGHT TO OUR PAGE  */
+body{
+    background:#df95dd ;
+    margin-bottom: 10px;
+    
+    
+}
+header .navbar-brand{
+    font-family: "Yusei Magic", sans-serif;
+    font-size: 30px;
+    text-align: center;
+}
+header .container{
+    float: left;
+    width:33%;
+    font-family: "Yusei Magic", sans-serif;
+    font-size: 20px;
+    padding-top: 100px;
+    padding-left: 50px;
+}
+header .filter_todo{
+    color: #c065c0;
+    width: 8rem;
+    cursor: pointer;
+    padding: 0.7rem;
+    border-radius: 12px;
+
+}
+header .filter_todo::after{
+    position: absolute;
+    color: #c065c0;
+    top: 7px;
+    right: 6px;
+    pointer-events: none;
+} 
+header .filter_todo:hover::after{
+   color: #583429;
+}
+header .left_navbar_menu{
+    list-style: none;
+    color: black;
+    justify-content: center;  
+}
+
+section .container{
+    float: left;
+    width:40%;
+    font-family: "Yusei Magic", sans-serif;
+    font-size: 20px; 
+}
+#addtaskinput{
+    justify-content: center;
+    align-items: center;
+    float: left;
+    border-radius: 12px;
+    padding: 0.5rem;
+    color: #C0C0C0;
+}
+#deleteallbtn{
+    border-radius: 12px;
+    padding: 0.5rem;
+    background: #ff3700;
+    color: white;
+    border: none;
+    margin-left: 0.2rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+#addtaskbtn{
+    border-radius: 12px;
+    padding: 0.5rem;
+    background: #008000;
+    color: white;
+    border: none;
+    margin-left: 0.2rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+#savetaskbtn{
+    border-radius: 12px;
+    padding: 0.5rem;
+    background: #806517;
+    color: white;
+    border: none;
+    margin-left: 0.2rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+#searchtextbox{
+    border-radius: 12px;
+    padding: 0.5rem;
+    color: #C0C0C0;
+    margin-bottom: 20px;
+    font-family: "Yusei Magic", sans-serif;
+}
+#edit{
+    border-radius: 12px;
+    padding: 0.5rem;
+    background: #0000FF;
+    color: white;
+    border: none;
+    margin-left: 0.2rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+.text-success{
+    border-radius: 12px;
+    padding: 0.5rem;
+    background: #FFA500;
+    color: white;
+    border: none;
+    margin-left: 0.2rem;
+    cursor: pointer;
+    font-size: 1rem; 
+   
+}
+#delete{
+    border-radius: 12px;
+    padding: 0.5rem;
+    background: #800000;
+    color: white;
+    border: none;
+    margin-left: 0.2rem;
+    cursor: pointer;
+    font-size: 1rem; 
+}
+
+.select{
+    margin-bottom: 10px;
+    color: #c065c0;
+    width: 33%;
+    cursor: pointer;
+    border-radius: 20px;
+}
+.table{
+    width: 100%;
+    height: 100%;
+}
+
+.completed{
+    text-decoration: line-through;
+    color: #ff3700;
+}
+.complete_imprt{
+    color:#E5E4E2;
+   
+}
+.complete_imprt:active{
+    color: #FFFF00;
+}
+.list_created{
+    width: 33%;
+    border-collapse: collapse;
+    float: right;
+    position: relative;
+    font-family: "Yusei Magic", sans-serif;
+    font-size: 20px;
+    color: #FF2400; 
+}
+.list_created{
+    list-style: none;
+}
+.filter_todos{
+    font-family: "Yusei Magic", sans-serif;
+    font-size: 20px;
+    color:#F52887 ;
+}
+/* time picker */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+input[type="number"] {
+	-moz-appearance: textfield;
+}
+.time-picker {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+
+	width: 100%;
+	max-width: 200px;
+	margin: 0 auto;
+	padding: 25px 15px;
+
+	background-color: #F3F3F3;
+	border-radius: 8px;
+	box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
+
+	color: #53565A;
+	font-size: 42px;
+	font-weight: 700;
+
+	user-select: none;
+}
+
+.time-picker .hour,
+.time-picker .minute {
+	position: relative;
+	min-width: 60px;
+	text-align: center;
+	display: flex;
+	justify-content: stretch;
+	align-items: stretch;
+}
+
+.time-picker .hour .hr,
+.time-picker .minute .min {
+	background: none;
+	font-size: 42px;
+	appearance: none;
+	border: none;
+	outline: none;
+	display: block;
+	width: 100%;
+	text-align: center;
+	font-family: 'Saira', sans-serif;
+}
+
+.time-picker .hour .hr-up,
+.time-picker .hour .hr-down,
+.time-picker .minute .min-up,
+.time-picker .minute .min-down {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+
+	width: 40px;
+	height: 20px;
+
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+
+	cursor: pointer;
+}
+
+.time-picker .hour .hr-up,
+.time-picker .minute .min-up {
+	top: -10px;
+	border-bottom: 15px solid #AAA;
+    margin-bottom: 5px;
+}
+
+.time-picker .hour .hr-down,
+.time-picker .minute .min-down {
+	bottom: -10px;
+	border-top: 15px solid #AAA;
+}
+
+.time-picker .hour .hr-up:hover,
+.time-picker .hour .hr-down:hover,
+.time-picker .minute .min-up:hover,
+.time-picker .minute .min-down:hover {
+	border-bottom-color: #53565A;
+	border-top-color: #53565A;
+}
+
+

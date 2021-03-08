@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Todo List</title>
+  <link href="https://fonts.googleapis.com/css2?family=Potta+One&family=Yusei+Magic&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Potta+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/todo-list.css" />
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="col-sm-12">
+        <nav class="navbar justify-content-between">
+          <!-- <a class="navbar-brand">Todo List</a> -->
+          <form class="form-inline">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"
+              id="searchtextbox" />
+              <div class="select">
+                <select name="todos" class="filter_todos" id="filter">
+                    <option value="all">All</option>
+                    <option value="completed">Completed</option>
+                    <option value="uncompleted">Uncompleted</option>
+                </select>
+            </div>
+          </form>
+        </nav>
+        <li class="left_navbar_menu">
+          <i class="fas fa-sun"></i>
+          <a href="/day.html"  class="myDay_links" > My Day</a> 
+      </li>
+      <li class="left_navbar_menu">
+          <i class="far fa-calendar-alt"></i>
+          <a href="/month.html"  class="myWeek_links">My Week</a>
+     </li>
+      <li  class="left_navbar_menu" >
+          <i class="far fa-star"></i>
+          <a href="/important.html" class="important_links">Important</a>
+      </li>
+  </ul>
+  <div class="add-new-list">
+      <i class="far fa-plus-square"></i>
+      <a class="newList_links"> New List </a>
+  </div>
+    </div>
+  </div>
+  </header>
+        <section class="todo-outer">
+            <div class="container">
+                  <h1>Todo List Application</h1>
+                  <div class="todo-inner">
+                    <div class="form-row">
+                      <div class="col-8 mr-sm-2">
+                        <input type="text" class="form-control" placeholder="Enter your task" id="addtaskinput" />
+                        <input type="hidden" id="saveindex">
+                      </div>
+                      <button type="button" class="btn btn-success mr-sm-2" id="addtaskbtn">
+                        Add Task
+                      </button>
+                      <button type="button" class="btn btn-success mr-sm-2" id="savetaskbtn" style="display: none;">
+                        Save Task
+                      </button>
+                      <p><input type="date" id="dateInput" class="date_"></p>
+                      <p><input type="time" id="timeInput" class="time_"></p>
+                      <!-- <button type="button" id="deleteallbtn" class="btn btn-danger">
+                        Clear All
+                      </button> -->
+                    </div>
+                    <div class="to-do-output">
+                      <table class="dispTable" id="addedtasklist"> 
+                      </table>
+                </div>
+              </div>
+            </div>
+          </section>
+          
+            <div class="list_created" id="dates">
+             
+                <li class="created_item">
+                    <i class="fas fa-chevron-right"></i>
+                    <a id="navbar_date"></a>
+                   <script> document.write(new Date().toUTCString()); </script> 
+                     <button type="button" id="deleteallbtn" class="btn btn-danger">
+                      <i class="far fa-trash-alt"></i>
+                    </button>
+                </li>  
+
+            </div>
+  <script src="js/todo-list.js"></script>
+</body>
+
+</html>

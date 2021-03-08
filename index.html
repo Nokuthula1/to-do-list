@@ -1,0 +1,109 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Potta+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Potta+One&family=Yusei+Magic&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/styles.css">
+    <title>To-Do List App</title>
+</head>
+<body>
+    <!-- TITLE -->
+    <header class="container">
+        <h1>To-Do-List</h1> 
+    </header>
+<!-- Left Side of the List -->
+    <div class="side_bar">
+        <form class="form-inline">
+            <input type="text" placeholder="Search" class="search-item" id="searchtextbox"  autocomplete="off"/>
+            <div id="search-results"></div>
+            <div id="search-data"></div>
+        </form>
+            <ul class="left_navbar_menu">
+                    <li class="navbar_item">
+                        <i class="fas fa-sun"></i>
+                        <a  class="myDay_links"> My Day</a> 
+                    </li>
+                    <li class="left_navbar_menu">
+                        <i class="far fa-calendar-alt"></i>
+                        <a  class="myWeek_links">My Week</a>
+                   </li>
+                    <li  class="left_navbar_menu" >
+                        <i class="far fa-star"></i>
+                        <a   class="important_links">Important</a>
+                    </li>
+                </ul>
+                <div class="add-new-list">
+                    <i class="far fa-plus-square"></i>
+                    <a class="newList_links"> New List </a>
+                </div>
+                <div class="select">
+                    <select name="todos" class="filter_todo">
+                        <option value="all">All</option>
+                        <option value="completed">Completed</option>
+                        <option value="uncompleted">Uncompleted</option>
+                    </select>
+                </div>
+            </div>
+    <!-- INPUT FIELD TO ENTER TASK AND DROPDOWN FILTER -->
+    
+        <div class="list">
+            <form>
+            <input type="text" placeholder="Enter Your Task" class="todo_input" id="todo_input" />
+            <button class="todo_button" type="submit">Submit</button>
+            </form>
+            <div class="todo_container">
+                <ul class="todo_list"></ul>
+            </div>
+    </div>
+   
+    
+    
+    <!-- CONTAINER FOR DISPLAYING TO-DO LIST BY ADDING TASKS DYNAMICALLY USING JAVASCRIPT -->
+    <div class="todo_container">
+        <ul class="todo_list"></ul>
+    </div>
+<!-- Right Side of the List -->
+    <div class="rightbar">
+        <ul class="right_navbar_menu">
+            <li class="navbar_item">
+                <i class="far fa-sun"></i>
+                <a  class="addDay_links"> Add to My Day</a> 
+            </li>
+            <li class="right_navbar_item">
+                <i class="fas fa-calendar-alt"></i>
+                <a  class="addWeek_links">Add to My Week</a>
+           </li>
+            <li  class="right_navbar_item" >
+                <i class="far fa-bell"></i>
+                <a   class="remindMe_links">Remind Me</a>
+            </li>
+            <li class="right_navbar_item">
+                <i class="fas fa-calendar-times"></i>
+                <a  class="dueDate_links">Add Due Date</a>
+           </li> 
+           <li class="right_navbar_item">
+            <i class="far fa-clipboard"></i>
+            <a  class="addNote_links">Add Note</a>
+            </li> 
+        </ul>
+        <div class="list_created" id="dates">
+            <li class="created_item"> 
+                <i class="fas fa-chevron-right"></i>
+                <a class="navbar_links"> Created </a>
+                <script> document.write(new Date().toUTCString()); </script>
+                <i class="far fa-trash-alt"></i>
+            </li>   
+        </div>
+    <!-- ADDING JAVA SCRIPT -->
+    <script src="./main.js"></script>
+</body>
+</html>
